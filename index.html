@@ -1,0 +1,58 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quiz App</title>
+        <link rel="stylesheet" href="main.css"/>
+    </head>
+    <body>
+        <div class="quiz-app">
+            <div class="quiz-info">
+                <div class="category">Category: <span>HTML</span></div>
+                <div class="count">Qustions Count: <span>5</span></div>
+            </div>
+            <div class="quiz-area">
+                <h2>What is .Net Framework used for</h2>
+            </div>
+            <div class="answers-area">
+                <div class="answer">
+                    <input type="radio" id="answer_1" name="questions" checked>
+                    <label for="answer_1">DevOps</label>
+                </div>
+                <div class="answer">
+                    <input type="radio" id="answer_2" name="questions">
+                    <label for="answer_2">Frontend</label>
+                </div>
+                <div class="answer">
+                    <input type="radio" id="answer_3" name="questions">
+                    <label for="answer_3">Backend</label>
+                </div>
+                <div class="answer">
+                    <input type="radio" id="answer_4" name="questions">
+                    <label for="answer_4">Testing</label>
+                </div>
+            </div>
+            <button class="submit-button">Submit Answer</button>
+            <div class="bullets">
+                <div class="spans">
+                    <span class="on"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            
+                <div class="countdowen">
+                    <span class="minutes">02</span> : <span class="seconds">45</span>
+                </div>
+            </div>
+            <div class="results">
+                <span class="perfect">Perfect</span> You Answered 5 out of 5
+            </div>
+            
+        </div>
+
+        <script src="main.js"></script>
+    </body>
+</html>

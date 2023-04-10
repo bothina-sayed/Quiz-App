@@ -1,0 +1,46 @@
+[
+    {
+        "title":"What is .Net Framework used for",
+        "answer_1":"DevOps",
+        "answer_2":"Frontend",
+        "answer_3":"Backend",
+        "answer_4":"Testing",
+        "right_answer":"Backend"
+    },
+
+    {
+        "title":"What is Sql used for",
+        "answer_1":"Backend",
+        "answer_2":"Database",
+        "answer_3":"DevOps",
+        "answer_4":"Testing",
+        "right_answer":"Database"
+    },
+
+    {
+        "title":"What is the Programming language used for Laravel FrameWork",
+        "answer_1":"c#",
+        "answer_2":"Java",
+        "answer_3":"C++",
+        "answer_4":"php",
+        "right_answer":"php"
+    },
+
+    {
+        "title":"What is the Programming language used for Node.js FrameWork",
+        "answer_1":"c#",
+        "answer_2":"JavaScript",
+        "answer_3":"C++",
+        "answer_4":"php",
+        "right_answer":"JavaScript"
+    },
+
+    {
+        "title":"What is React.js Framework used for",
+        "answer_1":"Backend",
+        "answer_2":"Testing",
+        "answer_3":"DevOps",
+        "answer_4":"Frontend",
+        "right_answer":"Frontend"
+    }
+]
