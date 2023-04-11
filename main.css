@@ -93,11 +93,12 @@ body
     margin-right: 5px;
     border-radius: 50px;
 }
-.quiz-app .bullets .spans span .on{
+.quiz-app .bullets .spans span.on{
     background-color: #0075ff;
 }
 .quiz-app .results span{
     font-weight: bold;
+
 }
 .quiz-app .results span.bad{
     color: #dc0a0d; 
