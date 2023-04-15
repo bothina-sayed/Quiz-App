@@ -21,39 +21,25 @@ function getQuestions(){
             let questionsObject = JSON.parse(this.responseText);
             let questionsCount = questionsObject.length;
 
-            // create bullets
             createBullets(questionsCount);
-
-            //add Qusestions data 
             addQuestionData(questionsObject[currentIndexForQuestion],questionsCount);
-            // start the countdown
-            countdowen( 1000 , questionsCount)
+            countdowen( 100 , questionsCount)
 
-            //click on submit button
-            submitButton.onclick = function(){ // deh function
-                // get right ansewer
+            submitButton.onclick = function(){ 
+               
                 let theRightAnswer = questionsObject[currentIndexForQuestion]["right_answer"];
-
                 currentIndexForQuestion++;
-
                 checkAnswer(theRightAnswer,questionsCount);
-
-                //Remove previous question
-
                 quizArea.innerHTML="";
                 answersArea.innerHTML="";
 
-               //add next Qusestion data after increment the count one 
                 addQuestionData(questionsObject[currentIndexForQuestion],questionsCount);
 
-                 //handel bullets
                 handleBullets();
                 
-                //to start the new count for new question
                 clearInterval(countdowenInterval);
-                countdowen(1000,questionsCount);
+                countdowen(100,questionsCount);
 
-                //Show results
 
                 showResults(questionsCount);
             
@@ -73,7 +59,6 @@ getQuestions();
 function createBullets(num){
     countSpan.innerHTML=num;
 
-    //create spans 
     for(let i =0 ; i<num;i++){
         let theBullet = document.createElement("span");
         if(i===0){
@@ -86,16 +71,13 @@ function createBullets(num){
 
 function addQuestionData(obj,count){
     if (currentIndexForQuestion < count){
-        //create h2 question title
      let questionTitle = document.createElement("h2");
-     //create Question text
      let questionText = document.createTextNode(obj["title"]);
 
      questionTitle.appendChild(questionText);
 
      quizArea.appendChild(questionTitle);
 
-     //create Answers
       for(let i = 1 ; i<=4 ;i++){
 
         let mainDiv=document.createElement("div");
@@ -108,13 +90,11 @@ function addQuestionData(obj,count){
         radioInput.id='answer_'+i;
         radioInput.dataset.answer=obj['answer_'+i];
 
-         //make first element checked
          if(i===1){
             radioInput.checked=true;
          }
 
 
-        //create label for radio 
         let theLabel = document.createElement("label");
 
         theLabel.htmlFor= 'answer_'+i;
@@ -170,11 +150,14 @@ function showResults(count){
         submitButton.remove();
 
         if(rightAnswers>(count/2) && rightAnswers<count){
-            theResults='<span class="good">Good</span>, '+rightAnswers+' from '+count;
+            theResults='<span class="good">Good</span>, '+rightAnswers+' from '+count+
+            '<button class="reload" onclick="location.reload()">Take the quize one more time </button>';
         }else if (rightAnswers===count){
-            theResults='<span class="perfect">Perfect</span>, All Answer is Correct';
+            theResults='<span class="perfect">Perfect</span>, All Answer is Correct'+
+            '<button class="reload" onclick="location.reload()">Take the quize one more time </button>';
         }else{
-            theResults='<span class="bad">Bad</span>, '+rightAnswers+' from '+count;
+            theResults='<span class="bad">Bad</span>, '+rightAnswers+' from '+count+
+            '<button class="reload" onclick="location.reload()">Take the quize one more time </button>';
         }
 
         resultsContainer.innerHTML=theResults;
